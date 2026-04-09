@@ -445,11 +445,69 @@
   </div>
 </nav>
 
-<!-- ✅ BIG BUN PAROTTA IMAGE (NEW SECTION ADDED) -->
+<!-- ✅ FOOD IMAGE SLIDER (3 IMAGES) -->
 <section class="hero-food-banner">
-  <img src="https://vaigai-garden.github.io/vaigai-garden/Bun%20Parotta.png"
-       alt="Vaigai Garden Legendary Bun Parotta Bengaluru">
+
+  <div class="food-slider">
+    <img src="https://vaigai-garden.github.io/vaigai-garden/Bun%20Parotta.png"
+         alt="Vaigai Garden Bun Parotta" class="slide active">
+
+    <img src="https://vaigai-garden.github.io/vaigai-garden/briyani.png"
+         alt="Vaigai Garden Biriyani" class="slide">
+
+    <img src="https://vaigai-garden.github.io/vaigai-garden/karidosa.png"
+         alt="Vaigai Garden Kari Dosa" class="slide">
+  </div>
+
 </section>
+
+<style>
+/* ===== FOOD SLIDER STYLE ===== */
+.hero-food-banner{
+  width:100%;
+  overflow:hidden;
+  position:relative;
+}
+
+.food-slider{
+  position:relative;
+  width:100%;
+  height:auto;
+}
+
+.food-slider img{
+  width:100%;
+  display:block;
+  position:absolute;
+  top:0;
+  left:0;
+  opacity:0;
+  transition:opacity 1s ease-in-out;
+}
+
+/* active image */
+.food-slider img.active{
+  opacity:1;
+  position:relative;
+}
+</style>
+
+<script>
+/* ===== AUTO IMAGE SLIDER ===== */
+let slides = document.querySelectorAll(".food-slider .slide");
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+
+  index++;
+  if(index >= slides.length){
+    index = 0;
+  }
+
+  slides[index].classList.add("active");
+}, 3000); // change every 3 seconds
+</script>
   
 <!-- HERO -->
 <section class="hero" aria-labelledby="hero-h1">
