@@ -279,6 +279,36 @@
       50%{box-shadow:0 6px 36px rgba(37,211,102,.85);}
     }
 
+/* ===== BIG PAROTTA HERO IMAGE ===== */
+.hero-food-banner{
+  width:100%;
+  position:relative;
+  margin-top:70px; /* navbar height */
+  overflow:hidden;
+  background:#000;
+}
+
+.hero-food-banner img{
+  width:100%;
+  height:520px;
+  object-fit:cover;
+  display:block;
+  transform:scale(1.05);
+  transition:transform 6s ease;
+}
+
+/* slow premium zoom effect */
+.hero-food-banner:hover img{
+  transform:scale(1.12);
+}
+
+/* mobile responsive */
+@media(max-width:768px){
+  .hero-food-banner img{
+    height:320px;
+  }
+}
+    
     /* ═══════════════════════════════════════════
        MOBILE OPTIMISATION
     ═══════════════════════════════════════════ */
@@ -404,6 +434,12 @@
   </div>
 </nav>
 
+<!-- ✅ BIG BUN PAROTTA IMAGE (NEW SECTION ADDED) -->
+<section class="hero-food-banner">
+  <img src="images/bun-parotta.jpg"
+       alt="Vaigai Garden Legendary Bun Parotta Bengaluru">
+</section>
+  
 <!-- HERO -->
 <section class="hero" aria-labelledby="hero-h1">
   <div class="hero-leaf"></div>
