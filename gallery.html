@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Vaigai Garden Gallery | Madurai Food in Bengaluru</title>
+<meta name="description" content="Explore Vaigai Garden food gallery – Bun Parotta, Biriyani, Kari Dosa & more authentic Madurai dishes." />
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --green:#3a8c2f;
+  --green-l:#4caf3e;
+  --gold:#f0a830;
+  --cream:#fdf6e8;
+  --dark:#1c1008;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Nunito',sans-serif;
+  background:var(--cream);
+  color:var(--dark);
+}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;
+  background:#fff;
+  height:70px;
+  display:flex;justify-content:space-between;
+  align-items:center;
+  padding:0 20px;
+  box-shadow:0 2px 15px rgba(0,0,0,0.1);
+  z-index:100;
+}
+nav img{height:60px;}
+.nav-links a{
+  margin-left:20px;
+  text-decoration:none;
+  font-weight:800;
+  color:#000;
+}
+.nav-links a:hover{color:var(--green);}
+
+/* HERO */
+.gallery-hero{
+  margin-top:70px;
+  padding:100px 20px 60px;
+  text-align:center;
+  background:linear-gradient(160deg,#1c3a10,#2d6020);
+  color:#fff;
+}
+.gallery-hero h1{
+  font-family:'Playfair Display';
+  font-size:3.5rem;
+}
+.gallery-hero p{opacity:.9;}
+
+/* GRID */
+.gallery{
+  padding:60px 20px;
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:20px;
+}
+
+.gallery img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:18px;
+  cursor:pointer;
+  transition:0.3s;
+}
+.gallery img:hover{
+  transform:scale(1.05);
+}
+
+/* LIGHTBOX */
+.lightbox{
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(0,0,0,0.9);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+.lightbox img{
+  max-width:90%;
+  max-height:85%;
+  border-radius:10px;
+}
+.lightbox:target{
+  display:flex;
+}
+
+/* FOOTER */
+footer{
+  background:#1c3a10;
+  color:#fff;
+  text-align:center;
+  padding:40px 20px;
+  margin-top:40px;
+}
+
+/* WHATSAPP BUTTON */
+.wa-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  padding:14px 20px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:800;
+  box-shadow:0 6px 20px rgba(0,0,0,0.3);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <img src="https://vaigai-garden.github.io/vaigai-garden/LOGO.png">
+  <div class="nav-links">
+    <a href="https://vaigai-garden.github.io/vaigai-garden/">Home</a>
+    <a href="https://vaigai-garden.github.io/vaigai-garden/menu">Menu</a>
+    <a href="#" style="color:var(--green)">Gallery</a>
+    <a href="https://vaigai-garden.github.io/vaigai-garden/contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="gallery-hero">
+  <h1>Our Food Gallery</h1>
+  <p>Authentic Madurai Taste • Fresh & Delicious</p>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+
+  <a href="#img1"><img src="https://vaigai-garden.github.io/vaigai-garden/Bun%20Parotta.png"></a>
+  <a href="#img2"><img src="https://vaigai-garden.github.io/vaigai-garden/briyani.png"></a>
+  <a href="#img3"><img src="https://vaigai-garden.github.io/vaigai-garden/gheepodidosa.png"></a>
+  <a href="#img4"><img src="https://vaigai-garden.github.io/vaigai-garden/karidosa.png"></a>
+  <a href="#img5"><img src="https://vaigai-garden.github.io/vaigai-garden/1.png"></a>
+  <a href="#img6"><img src="https://vaigai-garden.github.io/vaigai-garden/2.png"></a>
+  <a href="#img7"><img src="https://vaigai-garden.github.io/vaigai-garden/3.png"></a>
+  <a href="#img8"><img src="https://vaigai-garden.github.io/vaigai-garden/4.png"></a>
+  <a href="#img9"><img src="https://vaigai-garden.github.io/vaigai-garden/5.png"></a>
+  <a href="#img10"><img src="https://vaigai-garden.github.io/vaigai-garden/6.png"></a>
+  <a href="#img11"><img src="https://vaigai-garden.github.io/vaigai-garden/7.png"></a>
+  <a href="#img12"><img src="https://vaigai-garden.github.io/vaigai-garden/8.png"></a>
+  <a href="#img13"><img src="https://vaigai-garden.github.io/vaigai-garden/9.png"></a>
+
+</section>
+
+<!-- LIGHTBOX -->
+<div id="img1" class="lightbox"><img src="https://vaigai-garden.github.io/vaigai-garden/Bun%20Parotta.png"></div>
+<div id="img2" class="lightbox"><img src="https://vaigai-garden.github.io/vaigai-garden/briyani.png"></div>
+<div id="img3" class="lightbox"><img src="https://vaigai-garden.github.io/vaigai-garden/gheepodidosa.png"></div>
+<div id="img4" class="lightbox"><img src="https://vaigai-garden.github.io/vaigai-garden/karidosa.png"></div>
+<div id="img5" class="lightbox"><img src="https://vaigai-garden.github.io/vaigai-garden/1.png"></div>
+<div id="img6" class="lightbox"><img src="https://vaigai-garden.github.io/vaigai-garden/2.png"></div>
+<div id="img7" class="lightbox"><img src="https://vaigai-garden.github.io/vaigai-garden/3.png"></div>
+<div id="img8" class="lightbox"><img src="https://vaigai-garden.github.io/vaigai-garden/4.png"></div>
+<div id="img9" class="lightbox"><img src="https://vaigai-garden.github.io/vaigai-garden/5.png"></div>
+<div id="img10" class="lightbox"><img src="https://vaigai-garden.github.io/vaigai-garden/6.png"></div>
+<div id="img11" class="lightbox"><img src="https://vaigai-garden.github.io/vaigai-garden/7.png"></div>
+<div id="img12" class="lightbox"><img src="https://vaigai-garden.github.io/vaigai-garden/8.png"></div>
+<div id="img13" class="lightbox"><img src="https://vaigai-garden.github.io/vaigai-garden/9.png"></div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Vaigai Garden • Authentic Madurai Taste in Bengaluru</p>
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/919986024067?text=Hi%20I%20want%20to%20order" class="wa-float">
+  🟢 Order Now
+</a>
+
+</body>
+</html>
